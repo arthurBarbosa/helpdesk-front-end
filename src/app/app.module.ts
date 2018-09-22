@@ -14,6 +14,7 @@ import { routes } from './app.routes';
 import { UserService } from './services/user.service';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
+import { UserNewComponent } from './component/user-new/user-new.component';
 
 
 @NgModule({
@@ -23,7 +24,8 @@ import { FormsModule } from '@angular/forms';
     MenuComponent,
     FooterComponent,
     HomeComponent,
-    LoginComponent
+    LoginComponent,
+    UserNewComponent
   ],
   imports: [
     BrowserModule,
