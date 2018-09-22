@@ -1,3 +1,4 @@
+import { AuthGuard } from './component/security/auth.guard';
 import { AuthInterceptor } from './component/security/auth.interceptor';
 import { SharedService } from './services/shared.service';
 import { BrowserModule } from '@angular/platform-browser';
@@ -34,6 +35,7 @@ import { FormsModule } from '@angular/forms';
   providers: [
     UserService, 
     SharedService,
+    AuthGuard,
     {
       provide: HTTP_INTERCEPTORS,
       useClass: AuthInterceptor,
