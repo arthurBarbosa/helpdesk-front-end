@@ -1,3 +1,4 @@
+import { UserNewComponent } from './component/user-new/user-new.component';
 import { AuthGuard } from './component/security/auth.guard';
 import { HomeComponent } from './component/home/home.component';
 import { Routes, RouterModule } from '@angular/router';
@@ -6,7 +7,8 @@ import { ModuleWithProviders } from '@angular/compiler/src/core';
 
 export const ROUTES: Routes = [
     { path : '', component: HomeComponent, canActivate:[AuthGuard] },
-    { path : 'login', component: LoginComponent}
+    { path : 'login', component: LoginComponent},
+    { path : 'user-new', component: UserNewComponent, canActivate:[AuthGuard] }
 ]
 
 export const routes: ModuleWithProviders = RouterModule.forRoot(ROUTES);
