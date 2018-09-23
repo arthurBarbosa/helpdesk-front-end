@@ -23,7 +23,7 @@ export class UserService {
     }
   }
 
-  findAll(page:number, count, number){
+  findAll(page:number, count: number){
     return this.http.get(`${HELP_DESK_API}/api/users/${page}/${count}`);
   }
 
